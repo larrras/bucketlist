@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+    <meta property="og:title" content="My Bucketlist" />
+    <meta property="og:description" content="So, these are some of the things I wanna do before I die. I hope I have the time and opportunity to visit these beautiful places." />
+    <meta property="og:image" content="{{ url_for('static', filename='ogimage.png') }}" />
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +19,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
 
-    <title>Bucket List</title>
+    <title>To Do List Before I Die</title>
 
     <style>
         * {
@@ -155,7 +159,7 @@
             $.ajax({
                 type: "POST",
                 url: "/bucket/delete",
-                data: {delist_num: num },
+                data: { delist_num: num },
                 success: function (response) {
                     alert(response["msg"])
                     window.location.reload();
